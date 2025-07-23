@@ -73,7 +73,7 @@ IF OBJECT_ID('silver.erp_cust_az12', 'U') IS NOT NULL
 GO
 
 CREATE TABLE silver.erp_cust_az12 (
-    ci                  NVARCHAR(50),
+    cid                  NVARCHAR(50),
     bdate               DATE,
     gen                 NVARCHAR(50),
     dwh_create_date     DATETIME2 DEFAULT GETDATE()
