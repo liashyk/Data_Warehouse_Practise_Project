@@ -31,12 +31,12 @@ BEGIN
 		PRINT '------------------------------------------------';
 		PRINT 'Loading CRM Tables';
 		PRINT '------------------------------------------------';
+
 		--trim
 		--fix keys (remove duplcates and nulls)
 		--replace F/M to Female, Male
 		--S/M to Single/Married
-	
-		SET @start_time = GETDATE()
+		SET @start_time = GETDATE()s
 		PRINT('>>Truncate TABLE silver.crm_cust_info');
 		TRUNCATE TABLE silver.crm_cust_info;
 		PRINT('>>Load TABLE silver.crm_cust_info');
@@ -90,7 +90,7 @@ BEGIN
 		--replace - to _
 		--divide prd_key to cat_key and prd-key
 		--replace codes in prd_line
-		--replace prd_end_dt with start of the next prooduct
+		--replace prd_end_dt with start of the next product
 		SET @start_time = GETDATE()
 		PRINT('>>Truncate TABLE silver.crm_prd_info');
 		TRUNCATE TABLE silver.crm_prd_info;
@@ -175,6 +175,10 @@ BEGIN
 		PRINT '>> load duration ' + CAST(DATEDIFF(second, @start_time, @end_time) as NVARCHAR)+ ' seconds'
 		PRINT '---------'
 
+
+		PRINT '------------------------------------------------';
+		PRINT 'Loading ERP Tables';
+		PRINT '------------------------------------------------';
 		--replace gender with words
 		--replace bdate  that in the future with nulls
 		--remove "NASA" from cid
