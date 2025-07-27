@@ -36,7 +36,7 @@ BEGIN
 		--fix keys (remove duplcates and nulls)
 		--replace F/M to Female, Male
 		--S/M to Single/Married
-		SET @start_time = GETDATE()s
+		SET @start_time = GETDATE()
 		PRINT('>>Truncate TABLE silver.crm_cust_info');
 		TRUNCATE TABLE silver.crm_cust_info;
 		PRINT('>>Load TABLE silver.crm_cust_info');
