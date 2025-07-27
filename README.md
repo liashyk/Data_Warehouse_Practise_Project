@@ -17,7 +17,7 @@ Load files from the source into the database in their original form.
 ### Silver Layer
 Clean the data:
 - Remove inconsistencies and duplicates  
-- Replace or flag empty values  
+- Replace empty values  
 - Fix obvious anomalies
 
 ### Gold Layer
