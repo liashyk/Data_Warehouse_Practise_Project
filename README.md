@@ -1,4 +1,4 @@
-# Data_Warehouse_Practise_Project
+# Data Warehouse Practise Project
 
 This is my small learning project following the **Data with Bara** guide. I used the sample data and suggestions provided to build a simple ELT data ingestion pipeline. 
 
